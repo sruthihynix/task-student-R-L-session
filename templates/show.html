@@ -1,0 +1,19 @@
+<<html>
+<head>
+
+    <title>Show Students</title>
+</head>
+<body>
+<h1>Registered Students</h1>
+ <ol>
+        {% for student in students %}
+            <li>{{ student.s_name }}</li>
+        {% empty %}
+            <li>No students found.</li>
+        {% endfor %}
+    </ol>
+
+    <a href="{% url 'home' %}">Back to Home</a>
+
+</body>
+</html>
